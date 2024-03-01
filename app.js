@@ -1,15 +1,6 @@
-
-var isBulbOn = false;
-
 function change() {
     var img = document.getElementById("bulb");
-    
-
-    isBulbOn = !isBulbOn;
-
-    if (isBulbOn) {
-        img.src = "./assets/on.jpg";
-    } else {
-        img.src = "./assets/off.jpg";
-    }
+    var timestamp = new Date().getTime(); // Get current timestamp
+    img.src = "./assets/" + (img.src.includes("off") ? "on.jpg" : "off.jpg") + "?t=" + timestamp;
 }
+
