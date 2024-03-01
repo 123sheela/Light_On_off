@@ -1,6 +1,6 @@
 function change(){
     var img=document.getElementById("bulb");
-    if(img.src.match("off"))
+    if(img.src.includes("off"))
     {
         img.src="assets/on.jpg";
     }
